@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap');
+
+:root {
+  --clr-primary: #2563eb;
+  --clr-primary-hover: #1e40af;
+  --clr-accent: #f97316;
+  --clr-accent-hover: #c2410c;
+  --clr-text-main: #111827;
+  --clr-text-muted: #6b7280;
+  --clr-bg-main: #ffffff;
+  --clr-bg-alt: #f3f4f6;
+  --clr-border: #e5e7eb;
+  --clr-success: #10b981;
+  --clr-danger: #ef4444;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--clr-bg-main);
+  color: var(--clr-text-main);
+  line-height: 1.6;
+  margin: 0; 
+  overflow-x: hidden; 
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--clr-text-main);
+}
+
+h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+h2 { font-size: 2rem; margin-bottom: 0.75rem; }
+h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+
+p {
+  color: var(--clr-text-muted);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--clr-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--clr-primary-hover);
+}
+
+.price {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--clr-text-main);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.btn-accent {
+  background-color: var(--clr-accent);
+  color: #ffffff;
+}
+
+.btn-accent:hover {
+  background-color: var(--clr-accent-hover);
+  color: #ffffff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--clr-primary);
+  border: 2px solid var(--clr-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--clr-primary);
+  color: #ffffff;
+}
+
+.btn-full {
+  width: 100%;
+}

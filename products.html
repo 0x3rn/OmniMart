@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <title>Shop | OmniMart</title>
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">Omni<span>Mart</span></a>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products, brands and more...">
+                <button type="button" class="btn-accent">Search</button>
+            </div>
+            
+            <div class="header-actions">
+                <a href="account.html" class="action-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span class="action-text">Account</span>
+                </a>
+                <a href="cart.html" class="action-icon cart-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="action-text">Cart</span>
+                    <span class="cart-badge">3</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="category-header" style="background-color: var(--clr-bg-alt); padding: 40px 20px; text-align: center; border-bottom: 1px solid var(--clr-border);">
+        <h1>All Products</h1>
+        <p>Showing <span id="product-count">0</span> results</p>
+    </div>
+
+    <main class="shop-container" style="max-width: 1400px; margin: 40px auto; padding: 0 20px; display: flex; gap: 40px; align-items: flex-start;">
+        
+        <aside class="filters-sidebar" style="width: 260px; flex-shrink: 0; position: sticky; top: 100px; max-height: calc(100vh - 120px); overflow-y: auto; overscroll-behavior: contain; padding-right: 8px;">
+            
+            <div class="filter-group" style="margin-bottom: 30px;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 15px; border-bottom: 2px solid var(--clr-border); padding-bottom: 10px;">Categories</h3>
+                
+                <ul style="list-style: none; line-height: 2;">
+                    
+                    <li style="margin-bottom: 10px;">
+                        <a href="products.html?category=Electronics" style="font-weight: 700; color: var(--clr-text-main);">💻 Electronics</a>
+                        <ul style="list-style: none; padding-left: 20px; font-size: 0.95rem; margin-top: 5px;">
+                            <li><a href="products.html?category=Electronics&subcategory=Laptops" style="color: var(--clr-text-muted);">&rsaquo; Laptops</a></li>
+                            <li><a href="products.html?category=Electronics&subcategory=Smartphones" style="color: var(--clr-text-muted);">&rsaquo; Smartphones</a></li>
+                            <li><a href="products.html?category=Electronics&subcategory=Audio" style="color: var(--clr-text-muted);">&rsaquo; Audio</a></li>
+                        </ul>
+                    </li>
+
+                    <li style="margin-bottom: 10px;">
+                        <a href="products.html?category=Fashion" style="font-weight: 700; color: var(--clr-text-main);">👗 Fashion</a>
+                        <ul style="list-style: none; padding-left: 20px; font-size: 0.95rem; margin-top: 5px;">
+                            <li><a href="products.html?category=Fashion&subcategory=Mens" style="color: var(--clr-text-muted);">&rsaquo; Men's Clothing</a></li>
+                            <li><a href="products.html?category=Fashion&subcategory=Womens" style="color: var(--clr-text-muted);">&rsaquo; Women's Clothing</a></li>
+                            <li><a href="products.html?category=Fashion&subcategory=Shoes" style="color: var(--clr-text-muted);">&rsaquo; Shoes</a></li>
+                        </ul>
+                    </li>
+
+                    <li style="margin-bottom: 10px;">
+                        <a href="products.html?category=Beauty" style="font-weight: 700; color: var(--clr-text-main);">✨ Beauty & Health</a>
+                        <ul style="list-style: none; padding-left: 20px; font-size: 0.95rem; margin-top: 5px;">
+                            <li><a href="products.html?category=Beauty&subcategory=Skincare" style="color: var(--clr-text-muted);">&rsaquo; Skincare</a></li>
+                            <li><a href="products.html?category=Beauty&subcategory=Makeup" style="color: var(--clr-text-muted);">&rsaquo; Makeup</a></li>
+                            <li><a href="products.html?category=Beauty&subcategory=Haircare" style="color: var(--clr-text-muted);">&rsaquo; Haircare</a></li>
+                        </ul>
+                    </li>
+
+                    <li style="margin-bottom: 10px;">
+                        <a href="products.html?category=Sports" style="font-weight: 700; color: var(--clr-text-main);">⚽ Sports</a>
+                        <ul style="list-style: none; padding-left: 20px; font-size: 0.95rem; margin-top: 5px;">
+                            <li><a href="products.html?category=Sports&subcategory=Fitness" style="color: var(--clr-text-muted);">&rsaquo; Fitness Gear</a></li>
+                            <li><a href="products.html?category=Sports&subcategory=Camping" style="color: var(--clr-text-muted);">&rsaquo; Camping & Hiking</a></li>
+                        </ul>
+                    </li>
+
+                    <li style="margin-bottom: 10px;">
+                        <a href="products.html?category=Books" style="font-weight: 700; color: var(--clr-text-main);">📚 Books</a>
+                        <ul style="list-style: none; padding-left: 20px; font-size: 0.95rem; margin-top: 5px;">
+                            <li><a href="products.html?category=Books&subcategory=Self-Help" style="color: var(--clr-text-muted);">&rsaquo; Self-Help</a></li>
+                            <li><a href="products.html?category=Books&subcategory=Fiction" style="color: var(--clr-text-muted);">&rsaquo; Fiction</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="products.html?category=Home" style="font-weight: 700; color: var(--clr-text-main);">🏠 Home & Garden</a>
+                        <ul style="list-style: none; padding-left: 20px; font-size: 0.95rem; margin-top: 5px;">
+                            <li><a href="products.html?category=Home&subcategory=Furniture" style="color: var(--clr-text-muted);">&rsaquo; Furniture</a></li>
+                            <li><a href="products.html?category=Home&subcategory=Appliances" style="color: var(--clr-text-muted);">&rsaquo; Appliances</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filter-group brand-filter" style="margin-bottom: 30px;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 15px; border-bottom: 2px solid var(--clr-border); padding-bottom: 10px;">Brands</h3>
+                <label style="display: block; margin-bottom: 8px; color: var(--clr-text-muted); cursor: pointer;">
+                    <input type="checkbox" value="Nike" style="margin-right: 8px;"> Nike
+                </label>
+                <label style="display: block; margin-bottom: 8px; color: var(--clr-text-muted); cursor: pointer;">
+                    <input type="checkbox" value="Sony" style="margin-right: 8px;"> Sony
+                </label>
+                <label style="display: block; margin-bottom: 8px; color: var(--clr-text-muted); cursor: pointer;">
+                    <input type="checkbox" value="Apple" style="margin-right: 8px;"> Apple
+                </label>
+                <label style="display: block; margin-bottom: 8px; color: var(--clr-text-muted); cursor: pointer;">
+                    <input type="checkbox" value="Samsung" style="margin-right: 8px;"> Samsung
+                </label>
+                <label style="display: block; margin-bottom: 8px; color: var(--clr-text-muted); cursor: pointer;">
+                    <input type="checkbox" value="LG" style="margin-right: 8px;"> LG
+                </label>
+            </div>
+
+            <a href="products.html" class="btn btn-outline btn-full" style="text-align: center;">Clear All Filters</a>
+        </aside>
+
+        <section style="flex-grow: 1;">
+            <div id="dynamic-product-grid" class="product-grid">
+                <h3 id="loading-text" style="color: var(--clr-text-muted);">Loading massive catalog...</h3>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mega-footer">
+        <div class="footer-top">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo">Omni<span>Mart</span></a>
+                <p>Your one-stop destination for everything you need. Quality products, fast shipping, and exceptional customer service.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Track Your Order</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 OmniMart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/products.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/ui.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
