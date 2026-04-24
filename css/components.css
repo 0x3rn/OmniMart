@@ -256,6 +256,7 @@
     border: none;
     background: transparent;
     cursor: pointer;
+    display: none;
 }
 
 .menu-toggle svg {
@@ -333,6 +334,9 @@
     .auth-links p {
         display: block;
         margin-bottom: 10px;
+    }
+    .menu-toggle {
+        display: inline-flex;
     }
     .cart-item {
         flex-wrap: wrap;
