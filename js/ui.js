@@ -54,3 +54,36 @@ function initSearchBar() {
         });
     });
 }
+
+function initMobileMenus() {
+    const homeToggle = document.getElementById('home-category-toggle');
+    const homeDrawer = document.getElementById('home-category-drawer');
+    const productToggle = document.getElementById('mobile-filter-toggle');
+    const productSidebar = document.getElementById('products-sidebar');
+    const categoryLinks = document.querySelectorAll('.sidebar-cat-link');
+
+    if (homeToggle && homeDrawer) {
+        homeToggle.addEventListener('click', () => {
+            const isOpen = homeDrawer.classList.toggle('is-open');
+            homeToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    }
+
+    if (productToggle && productSidebar) {
+        productToggle.addEventListener('click', () => {
+            const isOpen = productSidebar.classList.toggle('is-open');
+            productToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    }
+
+    categoryLinks.forEach(link => {
+        const subcategoryList = link.nextElementSibling;
+        if (!subcategoryList || !subcategoryList.classList.contains('subcategory-list')) return;
+
+        link.addEventListener('click', (event) => {
+            if (window.innerWidth > 768) return;
+            event.preventDefault();
+            subcategoryList.classList.toggle('is-open');
+        });
+    });
+}

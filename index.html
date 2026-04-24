@@ -9,15 +9,19 @@
     <title>OmniMart</title>
 </head>
 <body>
-    <header class="main-header">
+    <header class="main-header home-header">
         <div class="header-container">
-            <a href="index.html" class="logo">Omni<span>Mart</span></a>
-            
-            <div class="search-bar">
-                <input type="text" placeholder="Search for products, brands and more...">
-                <button type="button" class="btn-accent">Search</button>
+            <div class="home-left-group">
+                <button type="button" class="action-icon menu-toggle" id="home-category-toggle" aria-expanded="false" aria-controls="home-category-drawer">
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                   <line x1="3" y1="6" x2="21" y2="6"></line>
+                   <line x1="3" y1="12" x2="21" y2="12"></line>
+                   <line x1="3" y1="18" x2="21" y2="18"></line>
+                   </svg>
+                   <span class="action-text">Categories</span>
+                </button>
+                <a href="index.html" class="logo">Omni<span>Mart</span></a>
             </div>
-            
             <div class="header-actions">
              <a href="./login.html" class="action-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -38,6 +42,20 @@
                 </a>
             </div>
         </div>
+        <div class="home-search-row">
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products, brands and more...">
+                <button type="button" class="btn-accent">Search</button>
+            </div>
+        </div>
+        <aside class="mobile-drawer" id="home-category-drawer">
+            <a href="products.html?category=Electronics">Electronics</a>
+            <a href="products.html?category=Fashion">Fashion</a>
+            <a href="products.html?category=Beauty">Beauty & Health</a>
+            <a href="products.html?category=Sports">Sports</a>
+            <a href="products.html?category=Books">Books</a>
+            <a href="products.html?category=Home">Home & Garden</a>
+        </aside>
     </header>
     <main class="main-container">
         <div class="carousel-track">

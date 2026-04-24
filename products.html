@@ -45,68 +45,92 @@
         <p>Showing <span id="product-count">0</span> results</p>
     </div>
 
+    <button type="button" class="btn btn-outline mobile-filter-toggle" id="mobile-filter-toggle" aria-expanded="false" aria-controls="products-sidebar">Filter Categories</button>
     <main class="shop-container" style="max-width: 1400px; margin: 40px auto; padding: 0 20px; display: flex; gap: 40px; align-items: flex-start;">
         
-        <aside class="filters-sidebar" style="width: 260px; flex-shrink: 0; position: sticky; top: 100px; max-height: calc(100vh - 120px); overflow-y: auto; overscroll-behavior: contain; padding-right: 8px;">
+        <!-- ==========================================
+             THE SIDEBAR (Updated with SVGs)
+        =========================================== -->
+        <aside id="products-sidebar" class="filters-sidebar" style="width: 260px; flex-shrink: 0; position: sticky; top: 100px;">
             
+            <!-- Category Tree -->
             <div class="filter-group" style="margin-bottom: 30px;">
                 <h3 style="font-size: 1.1rem; margin-bottom: 15px; border-bottom: 2px solid var(--clr-border); padding-bottom: 10px;">Categories</h3>
                 
                 <ul style="list-style: none; line-height: 2;">
                     
+                    <!-- Electronics -->
                     <li style="margin-bottom: 10px;">
-                        <a href="products.html?category=Electronics" style="font-weight: 700; color: var(--clr-text-main);">💻 Electronics</a>
-                        <ul style="list-style: none; padding-left: 20px; font-size: 0.95rem; margin-top: 5px;">
+                        <a href="products.html?category=Electronics" class="sidebar-cat-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                            Electronics
+                        </a>
+                        <ul class="subcategory-list" style="list-style: none; padding-left: 28px; font-size: 0.95rem; margin-top: 5px;">
                             <li><a href="products.html?category=Electronics&subcategory=Laptops" style="color: var(--clr-text-muted);">&rsaquo; Laptops</a></li>
                             <li><a href="products.html?category=Electronics&subcategory=Smartphones" style="color: var(--clr-text-muted);">&rsaquo; Smartphones</a></li>
                             <li><a href="products.html?category=Electronics&subcategory=Audio" style="color: var(--clr-text-muted);">&rsaquo; Audio</a></li>
                         </ul>
                     </li>
 
+                    <!-- Fashion -->
                     <li style="margin-bottom: 10px;">
-                        <a href="products.html?category=Fashion" style="font-weight: 700; color: var(--clr-text-main);">👗 Fashion</a>
-                        <ul style="list-style: none; padding-left: 20px; font-size: 0.95rem; margin-top: 5px;">
+                        <a href="products.html?category=Fashion" class="sidebar-cat-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a8 8 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z"></path></svg>
+                            Fashion
+                        </a>
+                        <ul class="subcategory-list" style="list-style: none; padding-left: 28px; font-size: 0.95rem; margin-top: 5px;">
                             <li><a href="products.html?category=Fashion&subcategory=Mens" style="color: var(--clr-text-muted);">&rsaquo; Men's Clothing</a></li>
                             <li><a href="products.html?category=Fashion&subcategory=Womens" style="color: var(--clr-text-muted);">&rsaquo; Women's Clothing</a></li>
                             <li><a href="products.html?category=Fashion&subcategory=Shoes" style="color: var(--clr-text-muted);">&rsaquo; Shoes</a></li>
                         </ul>
                     </li>
 
+                    <!-- Beauty & Health -->
                     <li style="margin-bottom: 10px;">
-                        <a href="products.html?category=Beauty" style="font-weight: 700; color: var(--clr-text-main);">✨ Beauty & Health</a>
-                        <ul style="list-style: none; padding-left: 20px; font-size: 0.95rem; margin-top: 5px;">
+                        <a href="products.html?category=Beauty" class="sidebar-cat-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            Beauty & Health
+                        </a>
+                        <ul class="subcategory-list" style="list-style: none; padding-left: 28px; font-size: 0.95rem; margin-top: 5px;">
                             <li><a href="products.html?category=Beauty&subcategory=Skincare" style="color: var(--clr-text-muted);">&rsaquo; Skincare</a></li>
                             <li><a href="products.html?category=Beauty&subcategory=Makeup" style="color: var(--clr-text-muted);">&rsaquo; Makeup</a></li>
                             <li><a href="products.html?category=Beauty&subcategory=Haircare" style="color: var(--clr-text-muted);">&rsaquo; Haircare</a></li>
                         </ul>
                     </li>
 
+                    <!-- Sports & Outdoors -->
                     <li style="margin-bottom: 10px;">
-                        <a href="products.html?category=Sports" style="font-weight: 700; color: var(--clr-text-main);">⚽ Sports</a>
-                        <ul style="list-style: none; padding-left: 20px; font-size: 0.95rem; margin-top: 5px;">
+                        <a href="products.html?category=Sports" class="sidebar-cat-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                            Sports
+                        </a>
+                        <ul class="subcategory-list" style="list-style: none; padding-left: 28px; font-size: 0.95rem; margin-top: 5px;">
                             <li><a href="products.html?category=Sports&subcategory=Fitness" style="color: var(--clr-text-muted);">&rsaquo; Fitness Gear</a></li>
                             <li><a href="products.html?category=Sports&subcategory=Camping" style="color: var(--clr-text-muted);">&rsaquo; Camping & Hiking</a></li>
                         </ul>
                     </li>
-
                     <li style="margin-bottom: 10px;">
-                        <a href="products.html?category=Books" style="font-weight: 700; color: var(--clr-text-main);">📚 Books</a>
-                        <ul style="list-style: none; padding-left: 20px; font-size: 0.95rem; margin-top: 5px;">
+                        <a href="products.html?category=Books" class="sidebar-cat-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                            Books
+                        </a>
+                        <ul class="subcategory-list" style="list-style: none; padding-left: 28px; font-size: 0.95rem; margin-top: 5px;">
                             <li><a href="products.html?category=Books&subcategory=Self-Help" style="color: var(--clr-text-muted);">&rsaquo; Self-Help</a></li>
                             <li><a href="products.html?category=Books&subcategory=Fiction" style="color: var(--clr-text-muted);">&rsaquo; Fiction</a></li>
                         </ul>
                     </li>
-
                     <li>
-                        <a href="products.html?category=Home" style="font-weight: 700; color: var(--clr-text-main);">🏠 Home & Garden</a>
-                        <ul style="list-style: none; padding-left: 20px; font-size: 0.95rem; margin-top: 5px;">
+                        <a href="products.html?category=Home" class="sidebar-cat-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                            Home & Garden
+                        </a>
+                        <ul class="subcategory-list" style="list-style: none; padding-left: 28px; font-size: 0.95rem; margin-top: 5px;">
                             <li><a href="products.html?category=Home&subcategory=Furniture" style="color: var(--clr-text-muted);">&rsaquo; Furniture</a></li>
                             <li><a href="products.html?category=Home&subcategory=Appliances" style="color: var(--clr-text-muted);">&rsaquo; Appliances</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
-
             <div class="filter-group brand-filter" style="margin-bottom: 30px;">
                 <h3 style="font-size: 1.1rem; margin-bottom: 15px; border-bottom: 2px solid var(--clr-border); padding-bottom: 10px;">Brands</h3>
                 <label style="display: block; margin-bottom: 8px; color: var(--clr-text-muted); cursor: pointer;">
