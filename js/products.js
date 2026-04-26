@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <div class="product-card">
                     ${badgeHTML}
                     <div class="product-image">
-                        <img src="${productImage}" alt="${productName}">
+                        <img src="${productImage}" alt="${productName}" loading="lazy">
                     </div>
                     <div class="product-info">
                         <span class="product-cat-label">${product.category} &rsaquo; ${product.subcategory}</span>

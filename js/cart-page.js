@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cart.forEach(item => {
             const itemHTML = `
                 <div class="cart-item">
-                    <img src="${item.image}" alt="${item.name}" class="cart-item-img">
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-img" loading="lazy">
                     <div class="cart-item-info">
                         <h3 class="cart-item-title">${item.name}</h3>
                         <div class="cart-item-price">$${item.price.toFixed(2)}</div>
@@ -55,15 +55,17 @@ document.addEventListener('DOMContentLoaded', () => {
         cart.forEach(item => {
             subtotal += (item.price * item.quantity);
         });
-
+    
         const tax = subtotal * 0.08;
         const total = subtotal + tax;
-
-        subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
-        taxEl.textContent = `$${tax.toFixed(2)}`;
-        totalEl.textContent = `$${total.toFixed(2)}`;
-
-        localStorage.setItem('omniCartTotal', `$${total.toFixed(2)}`);
+    
+        const formatCurrency = (num) => '$' + num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    
+        subtotalEl.textContent = formatCurrency(subtotal);
+        taxEl.textContent = formatCurrency(tax);
+        totalEl.textContent = formatCurrency(total);
+    
+        localStorage.setItem('omniCartTotal', formatCurrency(total));
     }
 
     window.updateQty = function(id, change) {

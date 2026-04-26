@@ -559,3 +559,108 @@
     -moz-appearance: textfield;
     appearance: textfield;
 }
+
+.drawer-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: var(--clr-text-main);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.drawer-close-btn svg {
+    width: 26px;
+    height: 26px;
+}
+
+.drawer-close-btn:hover,
+.drawer-close-btn:active {
+    background-color: var(--clr-bg-alt);
+    color: var(--clr-danger);
+}
+
+
+@media (max-width: 768px) {
+    .pd-actions {
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--clr-bg-main);
+        padding: 15px 20px;
+        margin: 0;
+        z-index: 1000;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .pd-add-btn {
+        white-space: nowrap;
+        flex: 1;
+        font-size: 1rem;
+    }
+
+    .product-detail-layout {
+        padding-bottom: 90px;
+    }
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--clr-text-muted);
+    margin-bottom: 25px;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: var(--clr-primary);
+}
+
+.back-link svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+.filter-close-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .filter-close-btn {
+        display: inline-block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        border: none;
+        font-family: var(--font-heading);
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--clr-text-muted);
+        cursor: pointer;
+        padding: 5px 10px;
+        transition: color 0.2s ease;
+    }
+
+    .filter-close-btn:hover,
+    .filter-close-btn:active {
+        color: var(--clr-danger);
+    }
+}
