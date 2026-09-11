@@ -1253,7 +1253,7 @@ button:active, .btn:active, .action-icon:active {
   max-width: 1440px;
   margin: 0 auto;
   justify-content: flex-start;
-  border-radius: 0 0 28px 28px;
+  border-radius: 0;
 }
 
 .home-page .carousel-overlay {
@@ -1562,8 +1562,8 @@ button:active, .btn:active, .action-icon:active {
 .home-page .newsletter-section {
   max-width: 1240px;
   margin: 108px auto 40px;
-  padding: 72px 24px;
-  border-radius: 24px;
+  padding: 64px 24px;
+  border-radius: 14px;
   background: var(--clr-primary);
 }
 
@@ -1582,7 +1582,7 @@ button:active, .btn:active, .action-icon:active {
 .home-page .newsletter-form {
   flex-direction: row;
   align-items: stretch;
-  max-width: 590px;
+  max-width: 500px;
   margin: 26px auto 0;
   gap: 10px;
 }
@@ -1598,8 +1598,8 @@ button:active, .btn:active, .action-icon:active {
 
 .home-page .newsletter-form button {
   width: auto;
-  min-width: 132px;
-  padding: 14px 22px;
+  min-width: 112px;
+  padding: 12px 18px;
   background: var(--clr-accent);
 }
 
@@ -1633,7 +1633,7 @@ button:active, .btn:active, .action-icon:active {
 
 @media (max-width: 768px) {
   .home-page .header-container { padding: 12px 15px; }
-  .home-page .main-container { min-height: 480px; height: clamp(480px, 66vw, 560px); border-radius: 0 0 20px 20px; }
+  .home-page .main-container { min-height: 480px; height: clamp(480px, 66vw, 560px); border-radius: 0; }
   .home-page .hero-content { padding: 0 26px; }
   .home-page .hero-content h1 { font-size: clamp(2.9rem, 12vw, 4.3rem); }
   .home-page .hero-content p { font-size: 1rem; }
@@ -1642,10 +1642,11 @@ button:active, .btn:active, .action-icon:active {
   .home-page .category-section { margin: 72px auto 0; padding: 0 14px; }
   .home-page .featured-section { margin: 82px auto 0; padding: 0 14px; }
   .home-page .promo-banner { min-height: 360px; margin: 82px 14px 0; padding: 62px 26px; border-radius: 20px; }
-  .home-page .newsletter-section { margin: 82px 14px 28px; padding: 58px 20px; border-radius: 20px; }
+  .home-page .newsletter-section { margin: 82px 14px 28px; padding: 52px 20px; border-radius: 14px; }
   .home-page .newsletter-form { flex-direction: column; }
-  .home-page .newsletter-form input,
-  .home-page .newsletter-form button { width: 100%; }
+  .home-page .newsletter-form { max-width: 360px; }
+  .home-page .newsletter-form input { width: 100%; }
+  .home-page .newsletter-form button { align-self: center; }
 }
 
 @media (max-width: 480px) {
