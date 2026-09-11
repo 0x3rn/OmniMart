@@ -45,7 +45,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <>
+    <div className="home-page">
       <Header variant="home" />
 
       <main className="main-container">
@@ -159,6 +159,6 @@ export default function HomePage() {
       </section>
 
       <Footer />
-    </>
+    </div>
   );
 }
