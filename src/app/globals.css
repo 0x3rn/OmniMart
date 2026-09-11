@@ -1269,6 +1269,25 @@ button:active, .btn:active, .action-icon:active {
   text-align: left;
 }
 
+.home-page .hero-content h1 .hero-brand {
+  display: inline-block;
+  color: #e19a7f;
+  clip-path: inset(0 100% 0 0);
+  animation: hero-brand-type 1.35s steps(8, end) 0.2s forwards;
+}
+
+@keyframes hero-brand-type {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .hero-content h1 .hero-brand {
+    animation: none;
+    clip-path: none;
+  }
+}
+
 .home-page .hero-content h1 {
   max-width: 650px;
   margin-bottom: 18px;

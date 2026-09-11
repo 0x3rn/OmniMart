@@ -62,7 +62,7 @@ export default function HomePage() {
           <div className="carousel-overlay"></div>
         </div>
         <div className="hero-content">
-          <h1>Welcome to OmniMart</h1>
+          <h1>Welcome to <span className="hero-brand">OmniMart</span></h1>
           <p>Discover amazing products at unbeatable prices. Shop electronics, fashion, and more.</p>
           <div className="hero-buttons">
             <Link href="/products" className="btn btn-accent">Shop Now</Link>
