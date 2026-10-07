@@ -4,6 +4,7 @@ import { CartProvider } from './context/CartContext';
 import { ToastProvider } from './context/ToastContext';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://omnimart.corstack.dev'),
   title: 'OmniMart - Your One-Stop Shop',
   description: 'Discover amazing products at unbeatable prices. Shop electronics, fashion, and more.',
 };
